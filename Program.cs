@@ -19,6 +19,9 @@
               
                 Console.WriteLine(person1.ToString());
                 Console.WriteLine(person2.ToString());^*/
+
+            List<Person> people = new List<Person>();
+
             
             Console.WriteLine("Välkommen!");
             int userChoice;
@@ -36,6 +39,7 @@
                 {
                     case 1:
                         {
+                            people.AddPerson();
                             break;
                         }
                     case 2:
