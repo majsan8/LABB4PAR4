@@ -9,15 +9,11 @@ namespace LABB4PAR4
 {
     public struct Hair
     {
-        public int HairLength;
+        public string HairLength;
         public string HairColor;
 
 
-        public Hair(int hairlength, string haircolor)
-        {
-            HairLength = hairlength;
-            HairColor = haircolor;
-        }
+    
 
         public override string ToString()
         {

@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
 
-            Person properties = new Person("1111", "blue", Gender.Woman, new Hair(10, "brown"));
+            Person properties = new Person(new DateTime(2024,12,18), "blue", Gender.Woman, "10", "brown", "Maja");
             List<Person> people = new List<Person>();
 
             Console.WriteLine("Welcome!");
@@ -27,7 +27,6 @@
                             
 
                             properties.AddPersonToList(people);
-                            Console.WriteLine("Persons in list:");
                             
                             break;
                             
@@ -38,7 +37,8 @@
                         {
                             foreach (var person in people)
                             {
-                                Console.WriteLine(person); // Antag att du har överlagrat ToString() i Person-klassen
+                                Console.WriteLine("Persons in list:\n");
+                                Console.WriteLine(person); 
                             }
                             break;
                         }
