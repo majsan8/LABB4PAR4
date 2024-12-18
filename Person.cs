@@ -48,123 +48,175 @@ namespace LABB4PAR4
         
 
             string name = "";
-            Console.WriteLine("What is the name of the person");
+            Console.WriteLine("What is the name of the person?");
             name = Console.ReadLine();
-
-
-
-
             DateTime birthday;
-            Console.WriteLine("Ange din födelsedag (åååå-mm-dd):");
-            string input = Console.ReadLine();
-            if (DateTime.TryParse(input, out birthday))
+
+            while (true)
             {
-            }
-            else
-            {
-                Console.WriteLine("Ogiltig inmatning. Ange födelsedagen i formatet åååå-mm-dd.");
-                Environment.Exit(0);
+
+                
+                Console.WriteLine("Enter the person's birthday (yyyy-mm-dd):");
+                string input = Console.ReadLine();
+                if (DateTime.TryParse(input, out birthday))
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input, please follow the instructions.");
+                    
+                }
             }
 
-
-            Console.WriteLine("What´s their eyecolor:\n1. Brown\n2. Gray\n3. Blue\n4. Green\n5. Black");
             string eyecolor = "";
-            int userPersonEC = int.Parse(Console.ReadLine());
-            if (userPersonEC == 1)
-            {
-                eyecolor = "Brown";
-            }
-            else if (userPersonEC == 2)
-            {
-                eyecolor = "Gray";
-            }
-            else if (userPersonEC == 3)
-            {
-                eyecolor = "Blue";
-            }
-            else if (userPersonEC == 4)
-            {
-                eyecolor = "Green";
-            }
-            else if (userPersonEC == 5)
-            {
-                eyecolor = "Black";
-            } 
-            else {
-                Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
-                Environment.Exit(0);
-            }
 
+            while (true)
+            {
+                Console.WriteLine("What´s their eyecolor:\n1. Brown\n2. Gray\n3. Blue\n4. Green\n5. Black");
+                int userPersonEC = int.Parse(Console.ReadLine());
+                if (userPersonEC == 1)
+                {
+                    eyecolor = "Brown";
+                    break;
+                }
+                else if (userPersonEC == 2)
+                {
+                    eyecolor = "Gray";
+                    break;
+                }
+                else if (userPersonEC == 3)
+                {
+                    eyecolor = "Blue";
+                    break;
+                }
+                else if (userPersonEC == 4)
+                {
+                    eyecolor = "Green";
+                    break;
+                }
+                else if (userPersonEC == 5)
+                {
+                    eyecolor = "Black";
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid input, please follow the instructions.");
+                }
+            }
+            
+            Gender gender;
 
+            while (true) { 
+                Console.WriteLine("What gender is the person?\n1. Woman\n2. Man\n3. Other");
+                int userGInput = int.Parse(Console.ReadLine());
+
+                if (userGInput == 1)
+                {
+                    gender = Gender.Woman;
+                    break;
+                }
+                else if (userGInput == 2)
+                {
+                    gender = Gender.Man;
+                    break;
+                }
+                else if (userGInput == 3)
+                {
+                    gender = Gender.Other;
+                    break;
+
+                }
+                else 
+                {
+                    Console.WriteLine("Invalid input, please follow the instructions.");
+                }
+                
+            }
 
             string hairlength = "";
 
-            Console.WriteLine("What´s their hair length, pick one of the following:\n1. Bald\n2. Short\n3. Medium\n4. Long\n5. Other");
-            int userHLinput = int.Parse(Console.ReadLine());
-
-            if (userHLinput == 1)
+            while (true)
             {
-                hairlength = "Bald";
-            }
-            else if (userHLinput == 2)
-            {
-                hairlength = "Short";
-            }
-            else if (userHLinput == 3)
-            {
-                hairlength = "Medium";
-            }
-            else if (userHLinput == 4)
-            {
-                hairlength = "Long";
-            }
-            else if (userHLinput == 5)
-            {
-                hairlength = "Other";
-            }
-            else
-            {
-                Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
-                Environment.Exit(0);
+                Console.WriteLine("What´s their hair length? Pick one of the following:\n1. Bald\n2. Short\n3. Medium\n4. Long\n5. Other");
+                int userHLinput = int.Parse(Console.ReadLine());
+
+                if (userHLinput == 1)
+                {
+                    hairlength = "Bald";
+                    break;
+                }
+                else if (userHLinput == 2)
+                {
+                    hairlength = "Short";
+                    break;
+                }
+                else if (userHLinput == 3)
+                {
+                    hairlength = "Medium";
+                    break;
+                }
+                else if (userHLinput == 4)
+                {
+                    hairlength = "Long";
+                    break;
+                }
+                else if (userHLinput == 5)
+                {
+                    hairlength = "Other";
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
+                    
+                }
+
             }
 
 
 
-
-
-            Console.WriteLine("What´s their hair color:\n1. Brown\n2. Blonde\n3. Gray\n4. Crazycolor\n5. Other");
+            Console.WriteLine("What´s their hair color?\n1. Brown\n2. Blonde\n3. Gray\n4. Crazycolor\n5. Other");
             int userHCInput = int.Parse(Console.ReadLine());
 
             string haircolor = "";
 
-            if (userHCInput == 1)
+            while (true)
             {
-                haircolor = "Brown";
+                if (userHCInput == 1)
+                {
+                    haircolor = "Brown";
+                    break;
+                }
+                else if (userHCInput == 2)
+                {
+                    haircolor = "Blonde";
+                    break;
+                }
+                else if (userHCInput == 3)
+                {
+                    haircolor = "Gray";
+                    break;
+                }
+                else if (userHCInput == 4)
+                {
+                    haircolor = "Crazycolor";
+                    break;
+                }
+                else if (userHCInput == 5)
+                {
+                    haircolor = "Other";
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
+                    
+                }
             }
-            else if (userHCInput == 2)
-            {
-                haircolor = "Blonde";
-            }
-            else if (userHCInput == 3)
-            {
-                haircolor = "Gray";
-            }
-            else if (userHCInput == 4)
-            {
-                haircolor = "Crazycolor";
-            }
-            else if (userHCInput == 5)
-            {
-                haircolor = "Other";
-            }
-            else
-            {
-                Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
-                Environment.Exit(0);
-            }
-
             // Skapa en ny instans av Person och lägg till den i listan
-            Person newPerson = new Person(birthday, eyecolor, Gender, hairlength, haircolor, name);
+            Person newPerson = new Person(birthday, eyecolor, gender, hairlength, haircolor, name);
             people.Add(newPerson);
         }
     }

@@ -10,6 +10,6 @@ namespace LABB4PAR4
     {
         Woman,
         Man,
-        None
+        Other
     }
 }
