@@ -36,20 +36,6 @@ namespace LABB4PAR4
                 $"Hair length: {Hair}";
         }
 
-        /*public override string AddPerson() { 
-        
-        
-            Console.WriteLine("Skriv in personens födelsedag (åååå-mm-dd):");
-            string userPersonBd = Console.ReadLine();
-
-            Person newPerson = new Person(userPersonBd);
-
-            (userPersonBd);
-
-
-            Console.WriteLine(people);
-
-        }*/
 
 
         public void AddPersonToList(List<Person> people)
@@ -63,7 +49,7 @@ namespace LABB4PAR4
                 userPersonGender = (int)Gender.Woman;
             }
 
-            Console.WriteLine("What is the person´s birthday? Write it like this (åååå-mm-dd):");
+            Console.WriteLine("What is the person´s birthday? Write it like this (yyyy-mm-dd):");
             string userPersonBd = Console.ReadLine();
 
             Console.WriteLine("What´s their eyecolor:");

@@ -4,23 +4,7 @@
     {
         static void Main(string[] args)
         {
-            /*Person person1 = new(
-                2001-10-30,
-                "Green",
-                Gender.Woman,
-                new Hair { HairLength = 20, HairColor = "Blonde", HairStyle = "Long" });
 
-            Person person2 = new(
-                1997-11-03,
-                "Brown",
-                Gender.Man,
-                new Hair { HairLength = 5, HairColor = "Brown", HairStyle = "Short" });
-                
-              
-                Console.WriteLine(person1.ToString());
-                Console.WriteLine(person2.ToString());^*/
-
-            // Person person = new Person("1990", "Blå", Gender.Man, new Hair(10, "Brunt"));
             Person properties = new Person("1111", "blue", Gender.Woman, new Hair(10, "brown"));
             List<Person> people = new List<Person>();
 
