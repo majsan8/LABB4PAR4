@@ -35,9 +35,10 @@
                         
                     case 2:
                         {
+                            Console.WriteLine("\nPersons in list:\n");
                             foreach (var person in people)
                             {
-                                Console.WriteLine("Persons in list:\n");
+                                
                                 Console.WriteLine(person); 
                             }
                             break;

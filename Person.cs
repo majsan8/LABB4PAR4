@@ -11,6 +11,8 @@ namespace LABB4PAR4
     public class Person
     {
         public DateTime Birthday { get; set; }
+
+        
         public string EyeColor { get; set; }
 
         public Gender Gender {  get; set; }
@@ -33,7 +35,7 @@ namespace LABB4PAR4
         public override string ToString()
         {
             return $"Name: {Name}\n" +
-                $"Birthday: {Birthday}\n" +
+                $"Birthday: {Birthday:yyyy/MM/dd}\n" +
                 $"Eye color: {EyeColor}\n" +
                 $"Gender: {Gender}\n" +
                 $"Hair length: {Hair.HairLength}\n" +
@@ -48,7 +50,7 @@ namespace LABB4PAR4
         
 
             string name = "";
-            Console.WriteLine("What is the name of the person?");
+            Console.WriteLine("\nWhat is the name of the person?");
             name = Console.ReadLine();
             DateTime birthday;
 
@@ -56,7 +58,7 @@ namespace LABB4PAR4
             {
 
                 
-                Console.WriteLine("Enter the person's birthday (yyyy-mm-dd):");
+                Console.WriteLine("\nEnter the person's birthday (yyyy-mm-dd):");
                 string input = Console.ReadLine();
                 if (DateTime.TryParse(input, out birthday))
                 {
@@ -64,7 +66,7 @@ namespace LABB4PAR4
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input, please follow the instructions.");
+                    Console.WriteLine("\nInvalid input, please follow the instructions.");
                     
                 }
             }
@@ -73,7 +75,7 @@ namespace LABB4PAR4
 
             while (true)
             {
-                Console.WriteLine("What´s their eyecolor:\n1. Brown\n2. Gray\n3. Blue\n4. Green\n5. Black");
+                Console.WriteLine("\nWhat´s their eyecolor:\n1. Brown\n2. Gray\n3. Blue\n4. Green\n5. Black");
                 int userPersonEC = int.Parse(Console.ReadLine());
                 if (userPersonEC == 1)
                 {
@@ -102,14 +104,14 @@ namespace LABB4PAR4
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input, please follow the instructions.");
+                    Console.WriteLine("\nInvalid input, please follow the instructions.");
                 }
             }
             
             Gender gender;
 
             while (true) { 
-                Console.WriteLine("What gender is the person?\n1. Woman\n2. Man\n3. Other");
+                Console.WriteLine("\nWhat gender is the person?\n1. Woman\n2. Man\n3. Other");
                 int userGInput = int.Parse(Console.ReadLine());
 
                 if (userGInput == 1)
@@ -130,7 +132,7 @@ namespace LABB4PAR4
                 }
                 else 
                 {
-                    Console.WriteLine("Invalid input, please follow the instructions.");
+                    Console.WriteLine("\nInvalid input, please follow the instructions.");
                 }
                 
             }
@@ -139,7 +141,7 @@ namespace LABB4PAR4
 
             while (true)
             {
-                Console.WriteLine("What´s their hair length? Pick one of the following:\n1. Bald\n2. Short\n3. Medium\n4. Long\n5. Other");
+                Console.WriteLine("\nWhat´s their hair length? Pick one of the following:\n1. Bald\n2. Short\n3. Medium\n4. Long\n5. Other");
                 int userHLinput = int.Parse(Console.ReadLine());
 
                 if (userHLinput == 1)
@@ -169,7 +171,7 @@ namespace LABB4PAR4
                 }
                 else
                 {
-                    Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
+                    Console.WriteLine("\nYou entered the wrong data, please try again and follow the instructions");
                     
                 }
 
@@ -177,7 +179,7 @@ namespace LABB4PAR4
 
 
 
-            Console.WriteLine("What´s their hair color?\n1. Brown\n2. Blonde\n3. Gray\n4. Crazycolor\n5. Other");
+            Console.WriteLine("\nWhat´s their hair color?\n1. Brown\n2. Blonde\n3. Gray\n4. Crazycolor\n5. Other");
             int userHCInput = int.Parse(Console.ReadLine());
 
             string haircolor = "";
@@ -211,7 +213,7 @@ namespace LABB4PAR4
                 }
                 else
                 {
-                    Console.WriteLine("You entered the wrong data, please try again and follow the instructions");
+                    Console.WriteLine("\nYou entered the wrong data, please try again and follow the instructions");
                     
                 }
             }
