@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace LABB4PAR4
         {
             HairLength = hairlength;
             HairColor = haircolor;
+        }
+
+        public override string ToString()
+        {
+            return $"{HairLength} cm, Color: {HairColor}";
         }
     }
 }
