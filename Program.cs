@@ -21,17 +21,17 @@
                 Console.WriteLine(person2.ToString());^*/
 
             // Person person = new Person("1990", "Blå", Gender.Man, new Hair(10, "Brunt"));
-            Person hajj = new Person("1111", "blå", Gender.Woman, new Hair(10, "brunt"));
+            Person hajj = new Person("1111", "blue", Gender.Woman, new Hair(10, "brown"));
 
-            Console.WriteLine("Välkommen!");
+            Console.WriteLine("Welcome!");
             int userChoice;
 
             while (true)
             {
-                Console.WriteLine("\n Du kommer nu att få tre val. Skriv valet med siffra");
-                Console.WriteLine("\n 1. Lägg till person" +
-                                "\n 2. Skriv ut lista med personlig information" +
-                                "\n 3. Avsluta programmet");
+                Console.WriteLine("\n Here are three choices, answer with a number");
+                Console.WriteLine("\n 1. Add person" +
+                                "\n 2. Print list with personal information" +
+                                "\n 3. Exit program");
                 
                 userChoice = int.Parse(Console.ReadLine());
 
@@ -42,7 +42,7 @@
                             List<Person> people = new List<Person>();
 
                             hajj.AddPersonToList(people);
-                            Console.WriteLine("Personer i listan:");
+                            Console.WriteLine("Persons in list:");
                             foreach (var person in people)
                             {
                                 Console.WriteLine(person); // Antag att du har överlagrat ToString() i Person-klassen
@@ -58,7 +58,7 @@
                         }
                     case 3:
                         {
-                            Console.WriteLine("Nu avslutas programmet");
+                            Console.WriteLine("Exiting program");
                             Environment.Exit(0);
                             break;
                         }

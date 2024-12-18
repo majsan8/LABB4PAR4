@@ -54,7 +54,7 @@ namespace LABB4PAR4
 
         public void AddPersonToList(List<Person> people)
         {
-            Console.WriteLine("Välj kön (1 för kvinna, 0 för man):");
+            Console.WriteLine("Choose (1 for woman, 0 for man):");
             int userChoiceGender = int.Parse(Console.ReadLine());
 
             int userPersonGender = 0; // Initiera med 0 som standard
@@ -63,16 +63,16 @@ namespace LABB4PAR4
                 userPersonGender = (int)Gender.Woman;
             }
 
-            Console.WriteLine("Skriv in personens födelsedag (åååå-mm-dd):");
+            Console.WriteLine("What is the person´s birthday? Write it like this (åååå-mm-dd):");
             string userPersonBd = Console.ReadLine();
 
-            Console.WriteLine("Skriv in personens ögonfärg:");
+            Console.WriteLine("What´s their eyecolor:");
             string userPersonEC = Console.ReadLine();
 
-            Console.WriteLine("Skriv in personens hårfärg:");
+            Console.WriteLine("What´s their hair color:");
             string userPersonHair = Console.ReadLine();
 
-            Console.WriteLine("Skriv in personens hårläng i siffror(cm)");
+            Console.WriteLine("What´s their hair length in cm:");
             int userPersonHairLength = int.Parse(Console.ReadLine());
 
             // Skapa en ny instans av Person och lägg till den i listan

@@ -21,7 +21,7 @@ namespace LABB4PAR4
 
         public override string ToString()
         {
-            return $"{HairLength} cm, Color: {HairColor}";
+            return $"{HairLength} cm, Hair color: {HairColor}";
         }
     }
 }
