@@ -221,5 +221,15 @@ namespace LABB4PAR4
             Person newPerson = new Person(birthday, eyecolor, gender, hairlength, haircolor, name);
             people.Add(newPerson);
         }
+
+        public void ListPersons(List<Person> people)
+        {
+            Console.WriteLine("\nPersons in list:\n");
+            foreach (var person in people)
+            {
+
+                Console.WriteLine(person);
+            }
+        }
     }
 }

@@ -35,12 +35,8 @@
                         
                     case 2:
                         {
-                            Console.WriteLine("\nPersons in list:\n");
-                            foreach (var person in people)
-                            {
-                                
-                                Console.WriteLine(person); 
-                            }
+                            properties.ListPersons(people);
+                            
                             break;
                         }
                     case 3:
