@@ -21,7 +21,8 @@
                 Console.WriteLine(person2.ToString());^*/
 
             // Person person = new Person("1990", "Blå", Gender.Man, new Hair(10, "Brunt"));
-            Person hajj = new Person("1111", "blue", Gender.Woman, new Hair(10, "brown"));
+            Person properties = new Person("1111", "blue", Gender.Woman, new Hair(10, "brown"));
+            List<Person> people = new List<Person>();
 
             Console.WriteLine("Welcome!");
             int userChoice;
@@ -39,14 +40,11 @@
                 {
                     case 1:
                         {
-                            List<Person> people = new List<Person>();
+                            
 
-                            hajj.AddPersonToList(people);
+                            properties.AddPersonToList(people);
                             Console.WriteLine("Persons in list:");
-                            foreach (var person in people)
-                            {
-                                Console.WriteLine(person); // Antag att du har överlagrat ToString() i Person-klassen
-                            }
+                            
                             break;
                             
                         }
@@ -54,6 +52,10 @@
                         
                     case 2:
                         {
+                            foreach (var person in people)
+                            {
+                                Console.WriteLine(person); // Antag att du har överlagrat ToString() i Person-klassen
+                            }
                             break;
                         }
                     case 3:
