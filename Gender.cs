@@ -8,7 +8,7 @@ namespace LABB4PAR4
 {
     public enum Gender
     {
-        Woman,
+        Woman = 1,
         Man,
         None
     }

@@ -10,6 +10,12 @@ namespace LABB4PAR4
     {
         public int HairLength;
         public string HairColor;
-        public string HairStyle;
+
+
+        public Hair(int hairlength, string haircolor)
+        {
+            HairLength = hairlength;
+            HairColor = haircolor;
+        }
     }
 }
